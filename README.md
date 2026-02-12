@@ -1,4 +1,4 @@
-This Python code implements a side-scrolling platformer game using the Pygame library. The game features a player character that can run, jump, and slide to avoid obstacles such as saws and spikes while collecting coins and energy boosts. The game includes multiple levels with increasing difficulty, different background themes, and a scoring system that tracks the player's progress, coins collected, and levels completed. The player must reach an endpoint flag to complete each level, with game over and level completion screens providing feedback and options to retry or advance. The game also includes a countdown timer at the start and dynamic spawning of obstacles, coins, and energy boosts to enhance gameplay.
+A 2D side-scrolling platformer built with Python and Pygame that demonstrates core game-development concepts such as real-time game loops, sprite animation, collision detection, and level progression. The player runs through multiple levels, avoids obstacles, and collects coins and boosts while scores and progress are stored persistently.
 ---
 
 ## Features
@@ -59,7 +59,54 @@ Persistent storage is handled through text files for scores, coins, and level da
 
 ---
 
+## Gameplay Flow
 
+<table>
+<tr>
+
+<td align="center">
+<img src="Game Flow/step1.png" width="160">
+</td>
+<td align="center"><b>→</b></td>
+
+<td align="center">
+<img src="Game Flow/step2.png" width="160">
+</td>
+<td align="center"><b>→</b></td>
+
+<td align="center">
+<img src="Game Flow/step3.png" width="160">
+</td>
+<td align="center"><b>→</b></td>
+
+<td align="center">
+<img src="Game Flow/step4.png" width="160">
+</td>
+<td align="center"><b>→</b></td>
+
+<td align="center">
+<img src="Game Flow/step5.png" width="160">
+</td>
+<td align="center"><b>→</b></td>
+
+<td align="center">
+<img src="Game Flow/step6.png" width="160">
+</td>
+<td align="center"><b>→</b></td>
+
+<td align="center">
+<img src="Game Flow/step7.png" width="160">
+</td>
+<td align="center"><b>→</b></td>
+
+<td align="center">
+<img src="Game Flow/step8.png" width="160">
+</td>
+
+</tr>
+</table>
+
+---
 
 ## How to Run
 
