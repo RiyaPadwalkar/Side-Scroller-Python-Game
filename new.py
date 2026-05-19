@@ -271,8 +271,14 @@ def updateFile():
         with open("scores.txt", "w") as f:
             f.write("0")
     f = open('scores.txt','r')
+    # file = f.readlines()
+    # last = int(file[0])
     file = f.readlines()
-    last = int(file[0])
+
+    if len(file) == 0:
+        last = 0
+    else:
+        last = int(file[0].strip())
 
     if last < int(score):
         f.close()
@@ -284,14 +290,37 @@ def updateFile():
     return last
 
 
+# def updateCoins():
+#     if not os.path.exists("coins.txt"):
+#         with open("coins.txt", "w") as f:
+#             f.write("0")
+#     with open('coins.txt','r') as f:
+#         file = f.readlines()
+#         last = int(file[0])
+
+#     if last < coins_collected:
+#         with open('coins.txt', 'w') as f:
+#             f.write(str(coins_collected))
+#         return coins_collected
+
+#     return last
+
 def updateCoins():
+    # Create coins.txt if it doesn't exist
     if not os.path.exists("coins.txt"):
         with open("coins.txt", "w") as f:
             f.write("0")
-    with open('coins.txt','r') as f:
-        file = f.readlines()
-        last = int(file[0])
 
+    with open('coins.txt', 'r') as f:
+        file = f.readlines()
+
+        # If file is empty
+        if len(file) == 0:
+            last = 0
+        else:
+            last = int(file[0].strip())
+
+    # Update best coin score
     if last < coins_collected:
         with open('coins.txt', 'w') as f:
             f.write(str(coins_collected))
@@ -300,13 +329,20 @@ def updateCoins():
     return last
 
 
+
 def updateLevel():
     if not os.path.exists("level.txt"):
         with open("level.txt", "w") as f:
             f.write("1")
     with open('level.txt','r') as f:
+        # file = f.readlines()
+        # last = int(file[0])
         file = f.readlines()
-        last = int(file[0])
+
+        if len(file) == 0:
+            last = 1
+        else:
+            last = int(file[0].strip())
 
     if last < current_level:
         with open('level.txt', 'w') as f:
